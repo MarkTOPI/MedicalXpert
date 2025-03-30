@@ -53,7 +53,7 @@
                 <img src="img/logo.png" alt="Logo">
                 <span>MEDICAL <br> XPERT</span>
             </a>
-            <div class="desctop">
+            <div class="navbar_desctop desctop">
                 <a href="#uslugi">Услуги</a>
                 <a href="#about">О нас</a>
                 <a href="#garantii">Гарантии</a>
@@ -125,7 +125,7 @@
     
 
     <!-- Блок с заголовком и текстом -->
-    <section class="container-fluid py-5" id="about">
+    <section class="container-fluid_about container-fluid py-5" id="about">
         <div class="box-info desctop" >
             <h3 class="">Профессиональная военно-медицинская экспертиза и поддержка по всей России</h3>
             <p class="">Мы исключаем сложности, действуем грамотно и гарантируем прозрачность 
@@ -147,14 +147,14 @@
         </div>
         
     </section>
-    <section class="container-fluid py-5">
-        <div class="row mb-4 disply-js">
+    <section class="container-fluid_help container-fluid">
+        <div class="row mb-4 disply-js container-fluid_help-title">
             <div class="col-md-5 marg padin" id="uslugi" >
                 <h2>Чем именно</h2>
                 <h3>мы можем</h3>
                 <h2>помочь</h2>
             </div>
-            <div class="col-md-6 text-start marg desctop">
+            <div class="col-md-7 text-start marg desctop">
                 <p>Мы знаем, насколько важен каждый шаг в вашем деле. 
                     Наш опыт и внимание к деталям помогают находить эффективные решения 
                     даже в сложных ситуациях.
@@ -364,13 +364,21 @@
                 </div>
             </div>
         </div>
-        <div class="box-footer-info desctop ">
-            <p class="">Оставьте заявку на бесплатную консультацию 
-                — мы проанализируем ситуацию 
-                и предложим индивидуальное решение, 
-                даже если его нет в списке стандартных услуг.
-                </p>
-                <button class="btn cons-form">Консультация-></button>
+        <div class="box-footer-info desctop">
+            <div class="box-footer-info_container">
+                <div class="box-footer-info_text">
+                    <h2>Не нашли</h2>
+                    <h2>нужную услугу?</h2>
+                    <p class="">Оставьте заявку на бесплатную консультацию 
+                        — мы проанализируем ситуацию 
+                        и предложим индивидуальное решение, 
+                        даже если его нет в списке стандартных услуг.
+                        </p>
+                </div>
+                <div class="box-footer-info_button">
+                    <button class="btn cons-form">Консультация-></button>
+                </div>
+            </div>
         </div>
 
         <section class="position-relative py-5 mobail" >

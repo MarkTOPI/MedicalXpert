@@ -55,6 +55,7 @@ nav.navbar {
     position: absolute;
     width: 100%;
     z-index: 11;
+    text-shadow: 7px 8px 7px rgba(0, 0, 0, 0.4);
 }
 
 .navbar a {
@@ -88,6 +89,14 @@ nav.navbar {
 .desctop {
     display: block;
 }
+
+.navbar_desctop {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
 .navbar a:hover {
     color: #c47f00 !important; /* Изменение цвета при наведении */
 }
@@ -135,6 +144,7 @@ nav.navbar {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    text-shadow: 7px 8px 7px rgba(0, 0, 0, 0.4);
 }
 
 .image-overlay h1:nth-child(1) {
@@ -147,6 +157,12 @@ nav.navbar {
     margin-left: 10%; /* Отступ от края */
 }
 
+.container-fluid_about {
+    height: 100vh;
+    width: 100%;
+    padding: 0 5%;
+    text-shadow: 7px 8px 7px rgba(0, 0, 0, 0.4);
+}
 
 /* Прозрачный фон для аккордеона */
 .accordion {
@@ -234,6 +250,14 @@ nav.navbar {
     padding: 50px;
 }
 
+.container-fluid_help {
+    padding: 5%;
+}
+
+.container-fluid_help-title {
+    text-shadow: 7px 8px 7px rgba(0, 0, 0, 0.4);
+}
+
 .text-main {
     display: flex;
     flex-direction: column;
@@ -260,6 +284,7 @@ nav.navbar {
 
 
 .box-info {
+    height: 100vh;
     width: 90%;
     line-height: 1.2;
     display: flex;
@@ -523,18 +548,36 @@ nav.navbar {
 }
 
 .box-footer-info {
-    margin-top: 50px;
-    display: flex;
-    flex-direction: column; /* Располагаем элементы вертикально */
-    justify-content: space-between; /* Оставляем место между элементами */
+    margin-top: 200px;
     font-family: 'Arial', sans-serif;
-    height: 60%; /* Обеспечиваем достаточную высоту для блока */
+    height: 60vh; /* Обеспечиваем достаточную высоту для блока */
+}
+
+.box-footer-info_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap; /* Располагаем элементы вертикально */
+}
+
+.box-footer-info_text {
+    width: 70%;
+}
+
+.box-footer-info_text h2{
+    /* font-size: 80px; */
+    font-weight: bold;
+    line-height: 1.2em;
+    text-shadow: 7px 8px 7px rgba(0, 0, 0, 0.4);
+}
+
+.box-footer-info_button {
+    align-content: flex-end;
 }
 
 .box-footer-info p {
     margin: 0; /* Убираем отступы вокруг текста */
     text-align: left; /* Текст слева */
-    width: 52%;
+    width: 75%;
 }
 
 .cons-form {
@@ -549,9 +592,16 @@ nav.navbar {
     margin-left: auto; /* Сдвигаем кнопку максимально вправо */
     margin-right: 200px; /* Отступ справа по умолчанию */
 }
+
+.box-footer-info_button button {
+    margin: 0;
+}
+
 .navbar-toggler, .mobail {
     display: none;
 }
+
+
 /* Адаптивные стили для мобильных устройств и малых экранов */
 @media (max-width: 1200px) {
     .cons-form {
@@ -979,6 +1029,7 @@ height: 50vh;
     }
     .headerText {
         display: none;
+        
     }
 
     .head-mob-text h1{
