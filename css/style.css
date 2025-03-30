@@ -1,0 +1,1309 @@
+@font-face {
+    font-family: 'RussoOne';
+    src: url('../fonts/RussoOne-Regular.woff2') format('woff2'),
+         url('../fonts/RussoOne-Regular.woff') format('woff'),
+         url('../fonts/RussoOne-Regular.ttf') format('truetype');
+    font-style: normal; 
+}
+
+
+head, body {
+    overflow-x: hidden;
+}
+body {
+    font-family: 'RussoOne', sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #302C28;
+    color: #FFF8EC;
+}
+
+h1 {
+    font-size: 120px;
+}
+
+h2 {
+    font-size: 80px;
+}
+
+h3 {
+    font-size: 50px;
+}
+
+h4 {
+    font-size: 40px;
+}
+
+h1, h2, h3, h4 {
+    text-transform: uppercase;
+}
+
+p {
+    font-size: 40px;
+    font-weight: 400;
+    font-family: 'Arial', sans-serif; 
+}
+
+.container-fluid {
+    padding: 0 100px;
+}
+
+/*Навигация*/
+
+
+nav.navbar {
+    position: absolute;
+    width: 100%;
+    z-index: 11;
+}
+
+.navbar a {
+    font-size: 32px;
+    color: #FFF8EC !important; /* Цвет шрифта */
+    text-transform: uppercase; /* Заглавные буквы */
+    text-decoration: none; /* Убираем подчеркивание */
+    margin: 0 15px; /* Отступы между ссылками */
+}
+
+.navbar a:hover {
+    color: #c47f00 !important; /* Изменение цвета при наведении */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание */
+    line-height: 1.1;
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Отступ между логотипом и текстом */
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы вертикально */
+    align-items: flex-start; /* Выравнивание текста по левому краю */
+}
+
+.desctop {
+    display: block;
+}
+.navbar a:hover {
+    color: #c47f00 !important; /* Изменение цвета при наведении */
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание */
+    line-height: 1.1;
+}
+
+.navbar-brand img {
+    margin-right: 10px; /* Отступ между логотипом и текстом */
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column; /* Располагаем элементы вертикально */
+    align-items: flex-start; /* Выравнивание текста по левому краю */
+}
+
+
+
+
+/*Шапка профиля*/
+.image-header {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Заполняет блок, не искажая пропорции */
+}
+
+.image-overlay {
+    padding: 0 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.image-overlay h1:nth-child(1) {
+    align-self: flex-start; /* Прижать к правому краю */
+    margin-right: 10%; /* Отступ от края */
+}
+
+.image-overlay h1:nth-child(2) {
+    align-self: flex-end; /* Прижать к левому краю */
+    margin-left: 10%; /* Отступ от края */
+}
+
+
+/* Прозрачный фон для аккордеона */
+.accordion {
+    background: rgba(255, 255, 255, 0); /* Прозрачный фон */
+    backdrop-filter: blur(10px); /* Эффект размытия фона */
+}
+
+/* Стиль для элементов аккордеона */
+.accordion-button {
+    border: none; /* Убираем бордер */
+    background-color: rgba(0, 0, 0, 0.1); /* Полупрозрачный фон */
+    color: #FFF8EC; /* Цвет текста кнопки */
+    padding: 15px; /* Отступы */
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+}
+
+/* Стиль для контента аккордеона */
+.accordion-body {
+    color: #FFF8EC !important; /* Цвет текста */
+    padding: 15px; /* Отступы */
+}
+
+/* Градиентный фон снизу */
+.accordion-item {
+    border: none;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0)); /* Градиент снизу */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0); /* Легкая тень для аккордеона */
+}
+
+.accordion-button {
+    font-weight: 400;
+}
+
+/* Эффект при раскрытии */
+.accordion-button:not(.collapsed) {
+    color: #FFF8EC; /* Цвет текста раскрытой кнопки */
+    background-color: rgba(0, 0, 0, 0); /* Темнее фон для раскрытого состояния */
+}
+
+/* Стиль для кнопки при наведении */
+.accordion-button:hover {
+    background-color: rgba(0, 0, 0, 0.041); /* Темнее при наведении */
+}
+/* Убираем голубой бордер при фокусе */
+.accordion-button:focus {
+    outline: none; /* Убираем стандартное обводку */
+    box-shadow: none; /* Убираем тень, которая появляется при фокусе */
+}
+
+/* Стиль для кнопки аккордеона при активном состоянии */
+.accordion-button:active {
+    background-color: rgba(0, 0, 0, 0.171); /* Темнее при активном нажатии */
+}
+/* Стиль для кнопки аккордеона */
+.accordion-button {
+    border: none; /* Убираем бордер */
+    background-color: rgba(0, 0, 0, 0.1); /* Полупрозрачный фон */
+    color: #FFF8EC; /* Цвет текста кнопки */
+    padding: 15px; /* Отступы */
+    transition: background-color 0.3s ease; /* Плавное изменение фона */
+    position: relative; /* Чтобы псевдоэлемент был корректно размещен */
+}
+
+/* Стиль для стрелочки */
+.accordion-button::after {
+    content: ""; /* Убираем стандартную стрелку */
+    position: absolute;
+    top: 50%;
+    right: 15px; /* Располагаем стрелку справа */
+    transform: translateY(-50%); /* Центрируем стрелку по вертикали */
+    width: 10px; /* Ширина стрелочки */
+    height: 10px; /* Высота стрелочки */
+    border-right: 2px solid #FFF8EC; /* Цвет и толщина правой линии */
+    border-bottom: 2px solid #FFF8EC; /* Цвет и толщина нижней линии */
+    transform: translateY(-50%) rotate(45deg); /* Поворот на 45 градусов */
+    transition: transform 0.3s ease; /* Плавное изменение при открытии */
+}
+
+/* Стиль для раскрытой кнопки (стрелка вниз) */
+.accordion-button:not(.collapsed)::after {
+    transform: translateY(-50%) rotate(-135deg); /* Поворот стрелки на 180 градусов для раскрытой кнопки */
+}
+
+.marg {
+    padding: 50px;
+}
+
+.text-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределение пространства */
+    padding: 40px;
+    position: relative; /* Для позиционирования кнопки */
+}
+
+.text-main h2 {
+    text-align: left; /* Заголовок остается сверху */
+    margin-bottom: auto; /* Оставляет место под контент */
+}
+
+.content {
+    flex-grow: 1; /* Позволяет тексту занимать место по центру */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cons-form {
+    background-color: #007bff00;
+}
+
+
+.box-info {
+    width: 90%;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.box-info h3{
+    padding: 40px 0;
+    font-weight: 400;
+    font-size: 50px;
+}
+
+.box-info p{
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    font-family: 'Arial', sans-serif; 
+    font-weight: 100;
+}
+/* Стили для сетки карточек */
+.grid-container-fluid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Два столбца */
+    gap: 100px;
+    margin-top: 20px;
+}
+
+/* Стили для каждой карточки */
+.grid-item {
+    position: relative;
+    width: 100%;
+    height: 800px;
+    cursor: pointer;
+    overflow: hidden; /* Прячем элементы, которые выходят за пределы */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Тень для карточки */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавный переход */
+}
+
+.grid-item:hover {
+    transform: scale(1.05); /* Легкое увеличение карточки при наведении */
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}
+
+/* Для внутренней части карточки */
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+/* Стиль для передней и задней стороны карточки */
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 20px;
+    box-sizing: border-box;
+    color: #fff; /* Белый текст */
+}
+
+/* Стиль передней стороны карточки */
+.card-front {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+    transition: background-color 0.3s ease; /* Плавная анимация цвета */
+}
+
+/* Стиль задней стороны карточки */
+.card-back {
+    background-color: #f1f1f1;
+    color: #333;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: space-between;
+}
+
+
+.client h2:first-child {
+    text-align: left;  /* Первый заголовок прижат влево */
+    width: 100%; /* Чтобы занял всю строку */
+}
+
+.client h2:last-child {
+    text-align: right; /* Второй заголовок прижат вправо */
+    width: 100%; /* Чтобы занял всю строку */
+}
+
+/* Стили для переворота */
+.card-inner.flipped {
+    transform: rotateY(180deg);
+}
+
+/* Псевдоклассы для цветового оформления карточек */
+.grid-item:nth-child(4n+1) .card-front,
+.grid-item:nth-child(4n+4) .card-front {
+    background-color: #FFF9ED; /* Синий цвет для 1, 4, 5, 8 карточек и т.д. */
+    color: #2F2B27;
+}
+
+.grid-item:nth-child(4n+2) .card-front,
+.grid-item:nth-child(4n+3) .card-front {
+    background-color: #6c757d00; /* Серый цвет для 2, 3, 6, 7 карточек и т.д. */
+    border: 1px solid #FFF8EC;
+    color: #FFF8EC;
+}
+
+.grid-item:nth-child(4n+1) .card-back,
+.grid-item:nth-child(4n+4) .card-back {
+    background-color: #FFF9ED; /* Синий цвет для 1, 4, 5, 8 карточек и т.д. */
+    color: #2F2B27; /* Серый цвет для задней стороны 1, 4, 5, 8 карточек и т.д. */
+  
+}
+
+.grid-item:nth-child(4n+2) .card-back,
+.grid-item:nth-child(4n+3) .card-back {
+    background-color: #6c757d00; /* Серый цвет для 2, 3, 6, 7 карточек и т.д. */
+    border: 1px solid #FFF8EC;
+    color: #FFF8EC; 
+}
+
+.card-front span, .card-back span {
+    font-size: 25px;
+    font-family: 'Arial', sans-serif; 
+}
+.card-front p, .card-back p, .custom-grid-item p {
+    font-size: 30px;
+    font-family: 'Arial', sans-serif; 
+}
+
+
+
+/* Сетка для 2 столбцов без отступов */
+.custom-grid-container {
+    display: flex;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+    margin: 200px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Карточки */
+.custom-grid-item {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 700px;
+    
+    min-height: 700px;
+    width: 700px;
+    overflow: hidden;
+    padding: 40px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-right: 1px solid #F0E0C9; /* Граница справа */
+    border-bottom: 1px solid #F0E0C9; /* Граница снизу */
+}
+
+/* Убираем границу у карточек в правом столбце */
+.custom-grid-item:nth-child(2n) {
+    border-right: none;
+}
+
+/* Убираем границу у карточек в последней строке */
+.custom-grid-item:nth-last-child(-n+2) {
+    border-bottom: none;
+}
+.custom-grid-item h4 {
+    font-size: 40px;
+}
+
+/* Стили для карточек с изображениями */
+.item-two .custom-card-front,
+.item-three .custom-card-front,
+.item-six .custom-card-front,
+.item-seven .custom-card-front {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Для .item-two и .item-three изображения будут фоном */
+.item-two .custom-card-front {
+    background-image: url('/img/numbers/one.png');
+}
+
+.item-three .custom-card-front {
+    background-image: url('/img/numbers/one.png');
+}
+
+.item-six .custom-card-front {
+    background-image: url('images/photo3.jpg');
+}
+
+.item-seven .custom-card-front {
+    background-image: url('images/photo4.jpg');
+}
+
+
+/* Стили для изображений внутри блоков .item-two и .item-three */
+
+.content-buttom {
+    width: 85%;
+}
+
+.content-buttom h2, .content-buttom .content {
+    width: 70%;
+}
+
+/* Стиль заголовков и текста внутри карточек */
+.custom-card-front h4, .custom-card-front p {
+    margin: 10px 0;
+}
+
+
+/* Левый столбец (всегда тёмный) */
+.custom-grid-item:nth-child(2n) { 
+    background-color: #2F2B27; /* Тёмный фон */
+    color: #FFF9ED; /* Светлый текст */
+}
+
+/* Правый столбец – по умолчанию тёмный */
+.custom-grid-item:nth-child(2n+1) {
+    background-color: #2F2B27; /* Тёмный фон */
+    color: #FFF9ED; /* Светлый текст */
+}
+
+/* Карточки №4, №8, №12 делаем светлыми */
+.custom-grid-item:nth-child(4), 
+.custom-grid-item:nth-child(8), 
+.custom-grid-item:nth-child(12) {
+    background-color: #FFF9ED; /* Светлый фон */
+    color: #2F2B27; /* Тёмный текст */
+}
+
+.lift {
+    margin: 200px 0;
+}
+
+.disply-js {
+    justify-content: space-between;
+}
+
+.marg h3{
+    margin: 0;
+    color: #fff8ec93;
+}
+
+.position-relative {
+    margin: 100px 0;
+}
+
+.box-footer-info {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column; /* Располагаем элементы вертикально */
+    justify-content: space-between; /* Оставляем место между элементами */
+    font-family: 'Arial', sans-serif;
+    height: 60%; /* Обеспечиваем достаточную высоту для блока */
+}
+
+.box-footer-info p {
+    margin: 0; /* Убираем отступы вокруг текста */
+    text-align: left; /* Текст слева */
+    width: 52%;
+}
+
+.cons-form {
+    color: #FFF8EC;
+    border: 2px solid #FFF8EC;
+    text-transform: uppercase;
+    border-radius: 0;
+    padding: 10px 40px;
+    font-size: 35px;
+    font-weight: bold;
+    align-self: flex-end; /* Размещаем кнопку внизу */
+    margin-left: auto; /* Сдвигаем кнопку максимально вправо */
+    margin-right: 200px; /* Отступ справа по умолчанию */
+}
+.navbar-toggler, .mobail {
+    display: none;
+}
+/* Адаптивные стили для мобильных устройств и малых экранов */
+@media (max-width: 1200px) {
+    .cons-form {
+        margin-right: 100px; /* Уменьшаем отступ справа для экранов меньше 1200px */
+    }
+}
+
+@media (max-width: 768px) {
+    .cons-form {
+        margin-right: 20px; /* Еще меньше отступ для экранов меньше 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    .cons-form {
+        margin-right: 10px; /* Минимальный отступ для мобильных устройств */
+    }
+}
+
+.footer {
+    position: relative;
+    color: #FFF8EC;
+    padding: 200px 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    z-index: 1;
+    overflow: hidden; /* Предотвращает выход изображения за пределы блока */
+}
+.footer h4{
+    font-size: 40px;
+    margin-bottom: 50px;
+    color: #fff8ec8e;
+}
+.footer-image-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрирует изображение */
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Изображение будет на заднем плане */
+}
+
+.footer-image-container img {
+    object-fit: contain; /* Сохраняет пропорции, изображение полностью вмещается в контейнер */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;opacity: 0.1;
+}
+
+/* Дополнительный стиль для футера */
+.footer .container {
+    max-width: 1200px;
+}
+
+.footer .row {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.box-num {
+height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.footer-contact h5, .footer-social h5, .footer-nav h5 {
+    margin-bottom: 15px;
+}
+
+.footer-contact p, .footer-contact a, .footer-social .social-icon, .footer-nav .nav-list a {
+    color: #FFF8EC;
+    text-decoration: none;
+    margin: 5px 0;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer-nav .nav-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.footer-nav .nav-list a {
+    display: block;
+    text-align: left;
+    color: #FFF8EC;
+    font-size: 40px;
+    padding-bottom: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-social .social-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%; /* Все элементы будут одинаковой высоты */
+}
+
+.footer-social .social-icon img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Это поможет сохранить пропорции */
+}
+
+.mess {
+    display: flex;
+}
+.footer-contact,
+.footer-social {
+    margin-bottom: 30px; /* Увеличивает расстояние между контактами и соцсетями */
+}
+
+.footer-contact h4, 
+.footer-social h4 {
+    margin-bottom: 15px; /* Увеличивает расстояние между заголовком и текстом */
+}
+
+.footer-contact p,
+.footer-social .social-icon {
+    margin-bottom: 10px; /* Увеличивает расстояние между каждым элементом */
+}
+
+/* Дополнительный отступ между социальными и контактными блоками */
+.footer .row {
+    margin-bottom: 50px; /* Увеличивает расстояние между блоками внутри футера */
+}
+
+/* Отключаем выделение текста при прокрутке */
+.scroll-container, .scroll-content, .item {
+    user-select: none; /* Отключает выделение текста */
+}
+
+.scroll-container {
+    overflow-x: auto;  /* Убедитесь, что горизонтальная прокрутка доступна */
+    position: relative; /* Для работы с позиционированием */
+}
+
+.scroll-content {
+    display: flex;
+    width: max-content;
+}
+
+.scroll-content .item {
+    flex: 0 0 auto;
+    margin: 20px;
+    width: 75vw; /* Блоки занимают 1/4 экрана */
+    min-width: 200px; /* Минимальная ширина */
+    font-weight: bold;
+    
+    /* ОГРАНИЧЕНИЕ ТЕКСТА */
+    overflow: hidden;        /* Скрывает выходящий текст */
+    word-wrap: break-word;   /* Переносит длинные слова */
+    white-space: normal;     /* Разрешает перенос строк */
+    padding: 100px;           /* Добавляем отступ внутри блока */
+}
+
+.bg-primary {
+    background-color: #FFF8EC !important; /* Оранжевый */
+    color: #2F2B27;
+}
+
+.bg-secondary {
+    background-color: #2F2B27 !important;
+    color: #FFF8EC;
+    border: 1px solid #FFF8EC; 
+}
+
+/* Псевдоэлемент для создания отступа после скроллбара */
+.scroll-container::after {
+    content: "";
+    display: block;
+    height: 20px; /* Отступ после скроллбара */
+}
+
+/* Скрываем стандартный скроллбар */
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Показываем скроллбар на ховер */
+.scroll-container:hover::-webkit-scrollbar {
+    display: block;
+    width: 8px; /* Ширина скроллбара */
+}
+
+/* Стили для дорожки скроллбара */
+.scroll-container::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Цвет фона дорожки */
+    border-radius: 10px;
+}
+
+/* Стили для ползунка скроллбара */
+.scroll-container::-webkit-scrollbar-thumb {
+    background: #FFF8EC;
+    border-radius: 10px;
+    border: 2px solid #2F2B27;
+}
+
+/* Стили для ползунка при наведении */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+    background: #F0E0C9;
+}
+
+
+
+/* Стрелки для прокрутки */
+/* Стрелки для прокрутки */
+.scroll-arrow-left,
+.scroll-arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: #FFF8EC;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.scroll-arrow-left {
+    left: 10px;
+}
+
+.scroll-arrow-right {
+    right: 10px;
+}
+
+/* Дополнительный стиль для scroll-container */
+.scroll-container {
+    position: relative;
+    width: 100vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    cursor: grab;
+}
+.foters {
+    display: flex;
+    justify-content: space-around;
+}
+
+.mobimg, .head-mob-text {
+    display: none;
+}
+
+.items {
+    background: url('../img/fons.png') center/cover;
+}
+@media (max-width: 1600px) {
+    h1 {
+        font-size: 80px;
+    }
+    
+    
+}
+@media (max-width: 1450px) {
+    h1 {
+        font-size: 80px;
+    }
+    
+    h2 {
+        font-size: 60px;
+    }
+    
+    h3 {
+        font-size: 30px;
+    }
+    
+    h4 {
+        font-size: 20px;
+    }
+    
+    h1, h2, h3, h4 {
+        text-transform: uppercase;
+    }
+    
+    p {
+        font-size: 40px;
+        font-weight: 400;
+    }
+    
+    .container-fluid {
+        padding: 0 100px;
+    }
+    .navbar a {
+        font-size: 24px;
+    }
+    .grid-item {
+        height: 600px;
+    }
+}
+
+@media (max-width: 1200px) {
+    h1 {
+        font-size: 60px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    h4 {
+        font-size: 18px;
+    }
+    .navbar a {
+        font-size: 16px;
+    }
+    .container-fluid {
+        padding: 0 50px;
+    }
+
+    p {
+        font-size: 20px;
+        font-weight: 400;
+    }
+    .card-front span, .card-back span {
+        font-size: 14px;
+        font-family: 'Arial', sans-serif;
+    }
+    .card-front p, .card-back p, .custom-grid-item p {
+        font-size: 24px;
+        font-family: 'Arial', sans-serif;
+    }
+    .grid-item {
+        height: 400px;
+    }
+    .cons-form {
+        color: #FFF8EC;
+        border: 2px solid #FFF8EC;
+        text-transform: uppercase;
+        border-radius: 0;
+        padding: 10px 40px;
+        font-size: 24px;
+        font-weight: 400;
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: 50px;
+    }
+    .lift {
+        margin: 100px 0;
+    }
+    .scroll-content .item {
+        padding:  30px;
+    }
+    .footer-nav .nav-list a {
+        font-size: 30px;
+    }
+    .footer-social .social-icon img {
+        max-width: 50%;
+        max-height: 50%;
+        object-fit: contain;
+    }
+}
+
+@media (max-width: 900px) {
+    .container-fluid {
+        padding: 0 10px;
+    }
+    .image-overlay {
+        padding: 0 50px;
+    }
+    .navbar a {
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 45px;
+    }
+}
+
+/* Для мобильных устройств */
+@media (max-width: 767px) {
+    .grid-container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+    h2 {
+        font-size: 30px;
+    }
+    
+    h3 {
+        font-size: 20px;
+    }
+    
+    h4 {
+        font-size: 24px;
+    }
+    p {
+        font-size: 14px;
+    }
+    .image-overlay {
+        padding: 0 20px;
+    }
+    .navbar a {
+        font-size: 24px;
+    }
+    .image-overlay h1:nth-child(1) {
+        align-self: flex-start; /* Прижать к правому краю */
+        margin-right: 0; /* Отступ от края */
+    }
+    
+    .image-overlay h1:nth-child(2) {
+        align-self: flex-start; /* Прижать к левому краю */
+        margin-left: 0; /* Отступ от края */
+    }
+    .headerText {
+        display: none;
+    }
+
+    .head-mob-text h1{
+        font-size: 24px;
+    }
+    .image-container img {
+        width: 100%;
+        height: 80vh;
+    }
+
+    .mobimg img {
+        width: 50%;
+        object-fit: cover; /* Заполняет блок, не искажая пропорции */
+    }
+    
+    .mobimg {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+    }
+    .desctop {
+        display: none;
+    }
+    .navbar-toggler, .head-mob-text, .mobail {
+        display: block;
+    }
+    .navbar-nav {
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 10px 0; /* Отступы между элементами навигации */
+    }
+
+    .navbar-toggler {
+        border: none;
+        background-color: transparent;
+    }
+
+    .box-info {
+        width: 100%;
+        padding: 40px;
+    }
+    .box-info p, .box-info h3 {
+        margin: 10px 20px;
+    }
+    .box-info h3 {
+        font-size: 32px;
+        padding: 0;
+        margin: 0 20px;
+    }
+
+
+
+    .box-info p {
+        font-size: 24px;
+        
+    }
+
+    .title-box {
+        margin: 20px 0;
+    }
+
+    .head-mob-text {
+        margin-top: 150px;
+    }
+    .box-info .min {
+        font-size: 26px;    
+        color: #fff8ec93;
+    }
+
+    .grid-container-fluid {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-item {
+        margin: auto;
+        width: 80%;
+        height: 350px;
+    }
+    .grid-container-fluid {
+        gap: 50px;
+    }
+    /* .disply-js {
+        margin: 0 40px;
+    } */
+    .text-main {
+        height: 100%;
+        width: 100%;
+    }
+    .cons-form {
+        color: #FFF8EC;
+        border: 2px solid #FFF8EC;
+        text-transform: uppercase;
+        border-radius: 0;
+        padding: 10px 40px;
+        font-size: 18px;
+        font-weight: 400;
+        align-self: flex-end;
+        margin-left: auto;
+        margin-right: 0;
+    }
+    .grid-item:nth-child(odd) .card-front {
+        background-color: #FFF9ED; /* Светлый фон */
+        color: #2F2B27; /* Тёмный текст */
+    }
+
+    .grid-item:nth-child(even) .card-front {
+        background-color: #6c757d00; /* Прозрачный фон (или другой цвет) */
+        border: none;
+        color: #FFF8EC;
+    }
+    .text-mobail-main {
+        padding-left: 40px;
+    }
+}
+@media (max-width: 767px) { /* Для мобильных устройств */
+    .main-form {
+        color: #FFF8EC;
+        border: 2px solid #FFF8EC;
+        text-transform: uppercase;
+        border-radius: 0;
+        padding: 10px 40px;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    .nav-main {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+        flex-direction: column;
+        
+    }
+    .custom-grid-item {
+        border: none;
+        width: 100%;
+        max-height: auto;
+        min-height: 300px;
+        display: flex;
+    }
+
+    .custom-grid-item img {
+        background-color: #2F2B27;
+        position: absolute;
+        z-index: -1;
+        margin: 20px;
+        width: 100%;
+    }
+
+    .custom-card {
+        padding: 10px; /* Отступ вокруг текста */
+    }
+    .custom-grid-container {
+        margin: 40px;
+    }
+    .custom-grid-item:nth-child(2n+1) {
+        background-color: #272422eb;
+        margin: 50px 0;
+    }
+    .custom-grid-item:nth-child(2n) {
+        color: #FFF9ED;
+        background-color: #272422eb;
+        margin: 50px 0;
+    }
+    .position-relative {
+        margin: 20px 40px;
+    }
+    .footer-nav .nav-list a {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+    /* .box-num {
+        flex-direction: column-reverse;
+    } */
+    .mess {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-social .social-icon img {
+        max-width: 30%;
+        max-height: 30%;
+    }
+    .footer-social .social-icon {
+        justify-content: start;
+    }
+    .footer-social .social-icon {
+        margin-bottom: 40px;
+    }
+    .footer {
+        padding: 100px 0;
+    }
+    .container-fluid {
+    padding: 0;
+    }
+    .row{
+        margin-right: 0;
+    }
+    .accordion {
+        margin: 40px;
+    }
+    .footer h4 {
+        font-size: 24px;
+    }
+    .accordion-item h4{
+        text-transform: none;
+        font-size: 20px;
+    font-family: 'Arial', sans-serif; 
+    }
+    .accordion-body {
+        /* margin-right: 10px; */
+        
+    font-family: 'Arial', sans-serif; 
+    }
+    /* Затемнение фона при открытии меню */
+body.menu-open {
+    overflow: hidden; /* Блокируем прокрутку страницы */
+    
+}
+
+body.menu-open::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #302C28; /* Полупрозрачный черный фон */
+    z-index: 1; /* Чтобы затемнение было поверх содержимого */
+}
+
+/* Стиль для крестика */
+.close-menu-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 30px;
+    color: white;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001; /* Убедитесь, что крестик поверх всех элементов */
+}
+
+.navbar-nav a {
+    z-index: 1000; /* Убедитесь, что кнопки меню остаются доступными */
+}
+
+
+
+/* Для того, чтобы скрыть затемнение, когда меню закрыто */
+body {
+    transition: 0.3s background-color ease;
+}
+
+/* Стили для кнопок меню */
+.navbar-nav .nav-link {
+    position: relative;
+    z-index: 1000; /* Чтобы кнопки были доступны для клика */
+    text-align: start;
+}
+/* Скрываем кнопку бургера, если меню открыто */
+.navbar-toggler.active {
+    pointer-events: none;  /* Отключаем кликабельность */
+    opacity: 0.5;  /* Можно также изменить прозрачность для визуального эффекта */
+}
+
+}
+
+@media (max-width: 620px) {
+    .custom-grid-item h4 {
+        font-size: 20px;
+    }
+    .card-front p, .card-back p, .custom-grid-item p
+    {
+        font-size: 15px;
+    }
+    .grid-item {
+        
+        height: 350px;
+    }
+    .image-container img {
+        width: 100%;
+        height: 150vh;
+    }
+
+    .mobimg img {
+        width: 50%;
+        object-fit: cover; /* Заполняет блок, не искажая пропорции */
+    }
+
+    .mobimg {
+        display: block;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+@media (max-width: 480px) {
+    .grid-item {
+        margin: auto;
+        width: 80%;
+        height: 450px;
+    }
+    .min-text {
+        font-size: 20px;
+    }
+    .mobimg img {
+        width: 80%;
+    }
+    .box-info h3 {
+        font-size: 24px;
+    }
+    .box-info .min {
+        font-size: 18px;
+    }
+    .box-info p {
+        font-size: 15px;
+    }
+}
