@@ -80,6 +80,10 @@ nav.navbar {
     margin-right: 10px; /* Отступ между логотипом и текстом */
 }
 
+.navbar-brand_mobile {
+    display: none;
+}
+
 .brand-text {
     display: flex;
     flex-direction: column; /* Располагаем элементы вертикально */
@@ -158,7 +162,7 @@ nav.navbar {
 }
 
 .container-fluid_about {
-    height: 100vh;
+    height: 100%;
     width: 100%;
     padding: 0 5%;
     text-shadow: 7px 8px 7px rgba(0, 0, 0, 0.4);
@@ -317,7 +321,7 @@ nav.navbar {
 .grid-item {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 584px;
     cursor: pointer;
     overflow: hidden; /* Прячем элементы, которые выходят за пределы */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Тень для карточки */
@@ -344,7 +348,7 @@ nav.navbar {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    padding: 20px;
+    padding: 55px 38px 100px 38px;
     box-sizing: border-box;
     color: #fff; /* Белый текст */
 }
@@ -388,7 +392,7 @@ nav.navbar {
 /* Псевдоклассы для цветового оформления карточек */
 .grid-item:nth-child(4n+1) .card-front,
 .grid-item:nth-child(4n+4) .card-front {
-    background-color: #FFF9ED; /* Синий цвет для 1, 4, 5, 8 карточек и т.д. */
+    background: url(/img/[1].svg); /* Синий цвет для 1, 4, 5, 8 карточек и т.д. */
     color: #2F2B27;
 }
 
@@ -578,6 +582,7 @@ nav.navbar {
     margin: 0; /* Убираем отступы вокруг текста */
     text-align: left; /* Текст слева */
     width: 75%;
+    text-shadow: 7px 8px 7px rgba(0, 0, 0, 0.4);
 }
 
 .cons-form {
@@ -1035,6 +1040,15 @@ height: 50vh;
     .head-mob-text h1{
         font-size: 24px;
     }
+
+    .image-header{
+        height: 790px;
+    }
+
+    .image-container{
+        height: 970px;
+    }
+
     .image-container img {
         width: 100%;
         height: 80vh;
@@ -1074,6 +1088,7 @@ height: 50vh;
     }
 
     .box-info {
+        height: 100%;
         width: 100%;
         padding: 40px;
     }
@@ -1098,7 +1113,7 @@ height: 50vh;
     }
 
     .head-mob-text {
-        margin-top: 150px;
+        /* margin-top: 150px; */
     }
     .box-info .min {
         font-size: 26px;    
@@ -1304,6 +1319,23 @@ body {
 }
 
 @media (max-width: 620px) {
+    .navbar-brand_desctop {
+        display: none;
+    }
+
+    .navbar-brand_mobile {
+        display: flex;
+    }
+
+    .navbar-brand span{
+        font-size: 15px;
+    }
+
+    .navbar-brand_mobile{
+        overflow: visible;
+    }
+
+
     .custom-grid-item h4 {
         font-size: 20px;
     }
@@ -1337,6 +1369,14 @@ body {
 
 }
 @media (max-width: 480px) {
+    .image-header{
+        height: 100%;
+    }
+
+    .image-overlay{
+        padding: 70px 20px 0px 20px;
+    }
+
     .grid-item {
         margin: auto;
         width: 80%;
