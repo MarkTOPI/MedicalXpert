@@ -963,7 +963,8 @@ height: 50vh;
         margin-right: 50px;
     }
     .lift {
-        margin: 100px 0;
+        margin: 0;
+        padding-top: 0 !important;
     }
     .scroll-content .item {
         padding:  30px;
@@ -995,6 +996,7 @@ height: 50vh;
 
 /* Для мобильных устройств */
 @media (max-width: 767px) {
+
     .grid-container-fluid {
         display: flex;
         flex-direction: column;
@@ -1037,8 +1039,16 @@ height: 50vh;
         
     }
 
-    .head-mob-text h1{
+    .container-fluid-about_mobile{
+        padding: 0;
+    }
+
+    .head-mob-text{
         font-size: 24px;
+    }
+
+    .header_subtext-mobile{
+        font-size: 19px;
     }
 
     .image-header{
@@ -1071,6 +1081,8 @@ height: 50vh;
     }
     .navbar-toggler, .head-mob-text, .mobail {
         display: block;
+        width: 2.5 em;
+        height: 2.5 em;
     }
     .navbar-nav {
         text-align: center;
@@ -1090,7 +1102,7 @@ height: 50vh;
     .box-info {
         height: 100%;
         width: 100%;
-        padding: 40px;
+        padding: 0 40px;
     }
     .box-info p, .box-info h3 {
         margin: 10px 20px;
@@ -1151,6 +1163,10 @@ height: 50vh;
         align-self: flex-end;
         margin-left: auto;
         margin-right: 0;
+    }
+    .box-footer-info_button-img_mobile{
+        height: 15px;
+        margin-top: -5px;
     }
     .grid-item:nth-child(odd) .card-front {
         background-color: #FFF9ED; /* Светлый фон */
@@ -1242,8 +1258,13 @@ height: 50vh;
         padding: 100px 0;
     }
     .container-fluid {
-    padding: 0;
+    padding-top: 0 !important;
     }
+
+    .container-fluid-about_mobile {
+        margin-top: 100px;
+    }
+
     .row{
         margin-right: 0;
     }
@@ -1329,6 +1350,7 @@ body {
 
     .navbar-brand span{
         font-size: 15px;
+        margin-left: -20px;
     }
 
     .navbar-brand_mobile{
@@ -1371,10 +1393,11 @@ body {
 @media (max-width: 480px) {
     .image-header{
         height: 100%;
+        padding: 0 0 55px 0;
     }
 
     .image-overlay{
-        padding: 70px 20px 0px 20px;
+        padding: 100px 20px 0px 20px;
     }
 
     .grid-item {
@@ -1386,7 +1409,7 @@ body {
         font-size: 20px;
     }
     .mobimg img {
-        width: 80%;
+        width: 100%;
     }
     .box-info h3 {
         font-size: 24px;
@@ -1396,5 +1419,8 @@ body {
     }
     .box-info p {
         font-size: 15px;
+    }
+    .container-fluid_help-text {
+        padding: 50px 50px 0px 50px;
     }
 }
