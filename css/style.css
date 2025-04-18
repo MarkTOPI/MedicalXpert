@@ -1337,6 +1337,10 @@ body {
     opacity: 0.5;  /* Можно также изменить прозрачность для визуального эффекта */
 }
 
+.card-front, .card-back {
+    padding: 30px;
+}
+
 }
 
 @media (max-width: 620px) {
