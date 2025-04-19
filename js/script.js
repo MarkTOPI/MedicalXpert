@@ -120,3 +120,27 @@ menuLinks.forEach(link => {
         document.querySelector('.navbar-brand').style.display = ''; 
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById('form-modal');
+    var openButton = document.getElementById('open-form-button');
+    var closeButton = document.getElementsByClassName('close')[0];
+
+    openButton.onclick = function() {
+        modal.style.display = 'block';
+    };
+
+    closeButton.onclick = function() {
+        modal.style.display = 'none';
+    };
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    };
+    console.log(
+        "123"
+    )
+});
