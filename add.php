@@ -8,13 +8,13 @@ $dealData = [
         'UF_CRM_1744985104713' => 'Коммент', // Имя пользователя (если есть пользовательское поле)
     ]
 ];
-
+print_r($dealData);
 // URL вашего REST API в Битриксе
 $apiUrl = 'https://medicalxpert.bitrix24.ru/rest/1/fdpf9tfw3izdfz7b/crm.deal.add.json';
 
 // Преобразуем данные в JSON
 $jsonData = json_encode($dealData);
-
+print_r($jsonData);
 // Настройки для cURL
 $ch = curl_init($apiUrl);
 curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
