@@ -14,7 +14,7 @@
     <meta property="og:url" content="https://medicalxpert.ru">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="MEDICAL XPERT">
-  
+
 
 
     <!-- Favicon -->
@@ -24,7 +24,7 @@
 
     <!-- Минифицированные стили Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+
     <!-- Основные стили -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
@@ -45,16 +45,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <form action="#" method="post">
-        <label for="full-name">Ваше ФИО *</label>
-        <input type="text" id="full-name" name="full-name">
-        <label for="phone">Телефон *</label>
-        <input type="tel" id="phone" name="phone">
-        <label for="message">Вопрос или комментарий по делу</label>
-        <textarea id="message" name="message"></textarea>
-        <button type="submit" class="submit-button">Отправить</button>
-    </form>
 
+    <div class="form-for-consultation">
+        <div class="form-consultation_container">
+            <div class="form-consultation_wrapper">
+                <div class="form-consultation">
+                    <div class="form-consultation_close">
+                        <button class="form-close" id="form-close"><img src="./img/close_btn.svg" alt="close"></button>
+                    </div>
+                    <div class="form-consultation_block">
+                        <h4>Оставьте заявку <br> на консультацию</h4>
+                        <span>Мы свяжемся с вами в ближайшее время.<br>Бесплатно проанализируем вашу ситуацию и предложим оптимальные шаги для решения вашего вопроса.</span>
+                        <form class="form-consultation_class" action="#" method="post">
+                            <input placeholder="Ваше ФИО" type="text" id="full-name" name="full-name">
+                            <input class="input_tel" placeholder="Телефон" type="tel" id="phone" name="phone">
+                            <textarea class="textarea_text" placeholder="Вопрос или комментарий по делу" id="message" name="message" rows="5"></textarea>
+                            <button id="submit_message" type="submit" class="form-submit_button">Отправить</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Навигация -->
     <nav class="navbar navbar-dark p-3">
@@ -68,14 +80,14 @@
                 <a href="#uslugi">Услуги</a>
                 <a href="#about">О нас</a>
                 <a href="#garantii">Гарантии</a>
-                <a href="#consultation">Консультация</a>
+                <a id="consultation_btn" href="#consultation">Консультация</a>
             </div>
-    
+
             <!-- Бургер-меню для мобильных устройств -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-    
+
             <!-- Ссылки для навигации -->
             <div class="collapse navbar-collapse mobail nav-main" id="navbarNav">
                 <div class="logo-main">
@@ -102,7 +114,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contacts">контакты</a>
                     </li>
-                    
+
                 </ul>
                 <br><br><br><br>
                 <div class="box-footer-info_button">
@@ -113,7 +125,7 @@
             </div>
         </div>
     </nav>
-    
+
 
     <!-- Шапка сайта -->
     <section class="image-header">
@@ -123,7 +135,7 @@
         <div class="image-overlay">
                 <h1 class="headerText">Каждое решение</h1>
                 <h1 class="headerText">имеет значение</h1>
-            
+
             <div class="">
                 <h1 class="head-mob-text">ввоенно-медицинская экспертиза</h1>
                 <h1 class="header_subtext-mobile">и поддержка по всей России</h1>
@@ -133,17 +145,17 @@
                 <img src="img/mobHeaderTwo.png" alt="Значимое решение">
             </div>
         </div>
-        
+
     </section>
-    
+
 
     <!-- Блок с заголовком и текстом -->
     <section class="container-fluid_about container-fluid container-fluid-about_mobile py-5" id="about">
         <div class="box-info desctop" >
             <h3 class="">Профессиональная военно-медицинская экспертиза и поддержка по всей России</h3>
-            <p class="">Мы исключаем сложности, действуем грамотно и гарантируем прозрачность 
+            <p class="">Мы исключаем сложности, действуем грамотно и гарантируем прозрачность
                 на&nbsp;пути к правильному решению.</p>
-                <p  class="">Анализируем и правильно оформляем документы, 
+                <p  class="">Анализируем и правильно оформляем документы,
                 разрабатываем стратегии, сопровождаем и защищаем ваши права.
                 </p>
         </div>
@@ -153,15 +165,15 @@
                 <h3 class="min">имеет значение</h3>
             </div>
             <p class="">
-                Анализируем и правильно оформляем документы, 
+                Анализируем и правильно оформляем документы,
                 разрабатываем стратегии, сопровождаем и защищаем ваши права.
             </p>
             <p class="">
-                Мы исключаем сложности, действуем грамотно и гарантируем прозрачность 
+                Мы исключаем сложности, действуем грамотно и гарантируем прозрачность
             на&nbsp;пути к правильному решению.
             </p>
         </div>
-        
+
     </section>
     <section class="container-fluid_help container-fluid">
         <div class="row mb-4 disply-js container-fluid_help-title">
@@ -171,13 +183,13 @@
                 <h2>помочь</h2>
             </div>
             <div class="col-md-7 text-start marg desctop">
-                <p>Мы знаем, насколько важен каждый шаг в вашем деле. 
-                    Наш опыт и внимание к деталям помогают находить эффективные решения 
+                <p>Мы знаем, насколько важен каждый шаг в вашем деле.
+                    Наш опыт и внимание к деталям помогают находить эффективные решения
                     даже в сложных ситуациях.
                 </p>
             </div>
         </div>
-    
+
         <div class="grid-container-fluid" >
             <div class="grid-item" onclick="flipCard(this)">
                 <div class="card-inner">
@@ -185,7 +197,7 @@
                         <div class="text">
                         <h3>Экспертиза мед.документов</h3>
                         <span> — вы сможете избежать ошибок и недочетов, которые могут привести к нежелательному решению комиссии. </span>
-                        <p>Четкие рекомендации по дальнейшим шагам, которые значительно повысят шансы 
+                        <p>Четкие рекомендации по дальнейшим шагам, которые значительно повысят шансы
                             на благоприятный исход.
                             </p>
                         </div>
@@ -194,7 +206,7 @@
                     <div class="card-back">
                         <div class="text">
                             <h3>Что входит в услугу:</h3>
-                            <p>— Анализ заключений, медицинских карт,        эпикризов, результатов обследований 
+                            <p>— Анализ заключений, медицинских карт,        эпикризов, результатов обследований
                                 и анализов.</p>
                             <p>— Проверка полноты и корректности документов.</p>
                             <p>— Оценка медицинских данных на соответствие критериям годности к военной службе.
@@ -204,7 +216,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="card-front">
@@ -227,7 +239,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="card-front">
@@ -251,17 +263,17 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="card-front">
-                        
+
                         <div class="text">
                             <h3>Правовое сопровождение при проведении ввк</h3>
                             <span>— контроль за процессом, чтобы защитить ваши интересы и обеспечить справедливое решение.</span>
                             <p>Обеспечим защиту от возможных нарушений прав и проконтролируем процесс прохождения комиссии.</p>
                         </div>
-                        <span>Подробнее <img src="./img/arrow_dark.svg" alt="strelka"></span>    
+                        <span>Подробнее <img src="./img/arrow_dark.svg" alt="strelka"></span>
                     </div>
                     <div class="card-back">
                         <div class="text">
@@ -275,11 +287,11 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="card-front">
-                        
+
                         <div class="text">
                         <h3>оспаривание решения ВВК</h3>
                         <span>— проанализируем заключение комиссии, выявим основания для оспаривания и подготовим обоснованную жалобу.</span>
@@ -300,7 +312,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="card-front">
@@ -325,7 +337,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="card-front">
@@ -349,11 +361,11 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" onclick="flipCard(this)">
                 <div class="card-inner">
                     <div class="card-front">
-                        
+
                         <div class="text">
                             <h3>Перевод военнослужащего</h3>
                             <h4>в другое военно-медицинское учреждение</h4>
@@ -369,7 +381,7 @@
                             <p>— Подготовка необходимых документов.</p>
                             <p>— Взаимодействие с военными и медицинскими инстанциями.</p>
                             <p>— Контроль за процессом перевода и защита прав военнослужащего.</p>
-                            
+
                         </div>
                         <span>Оставить заявку <img src="./img/arrow_light.svg" alt="strelka"></span>
                     </div>
@@ -381,9 +393,9 @@
                 <div class="box-footer-info_text">
                     <h2>Не нашли</h2>
                     <h2>нужную услугу?</h2>
-                    <p class="">Оставьте заявку на бесплатную консультацию 
-                        — мы проанализируем ситуацию 
-                        и предложим индивидуальное решение, 
+                    <p class="">Оставьте заявку на бесплатную консультацию
+                        — мы проанализируем ситуацию
+                        и предложим индивидуальное решение,
                         даже если его нет в списке стандартных услуг.
                         </p>
                 </div>
@@ -400,14 +412,14 @@
                         <h2>не нашли
                             нужную&nbsp;услугу?</h2>
                         <div class="content">
-                            <p>Оставьте заявку на бесплатную консультацию 
-                                — мы проанализируем ситуацию 
-                                и предложим индивидуальное решение, 
+                            <p>Оставьте заявку на бесплатную консультацию
+                                — мы проанализируем ситуацию
+                                и предложим индивидуальное решение,
                                 даже если его нет в списке стандартных услуг.</p>
                         </div>
                         <button class="cons-form">Консультация <img class="box-footer-info_button-img_mobile" src="./img/consultation_arrow.svg" alt="strelka"></button>
                     </div>
-                   
+
     </section>
 </section>
 
@@ -435,8 +447,8 @@
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Наши специалисты обладают большим опытом работы с военно-врачебными комиссиями, медицинскими учреждениями 
-                        и юридическими аспектами медицинской экспертизы. 
+                    <div class="accordion-body">Наши специалисты обладают большим опытом работы с военно-врачебными комиссиями, медицинскими учреждениями
+                        и юридическими аспектами медицинской экспертизы.
                         Мы знаем все нюансы процессов и готовы предложить наилучшие решения для вашей ситуации.</div>
                 </div>
             </div>
@@ -449,7 +461,7 @@
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Независимо от вашего местоположения, мы готовы оказать квалифицированную помощь в любой точке страны. 
+                    <div class="accordion-body">Независимо от вашего местоположения, мы готовы оказать квалифицированную помощь в любой точке страны.
                         Оперативно организуем дистанционные консультации, анализ документов и сопровождение вашего дела.</div>
                 </div>
             </div>
@@ -462,7 +474,7 @@
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Все наши действия полностью соответствуют законодательству. 
+                    <div class="accordion-body">Все наши действия полностью соответствуют законодательству.
                         Тщательно следим за соблюдением ваших прав и готовы отстаивать их в вышестоящих инстанциях и судах.</div>
                 </div>
             </div>
@@ -475,8 +487,8 @@
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Разрабатываем персональные стратегии, учитывая ваши документы и обстоятельства. 
-                        Понимая, как стресс влияет на процесс, мы обеспечиваем психологическую поддержку на каждом этапе, 
+                    <div class="accordion-body">Разрабатываем персональные стратегии, учитывая ваши документы и обстоятельства.
+                        Понимая, как стресс влияет на процесс, мы обеспечиваем психологическую поддержку на каждом этапе,
                         чтобы вы чувствовали себя уверенно и спокойно.</div>
                 </div>
             </div>
@@ -489,15 +501,15 @@
                     </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Проводим детальный анализ вашей ситуации, чтобы определить наиболее эффективную стратегию действий. 
-                        Благодаря опыту работы с ВВК и знаниям всех тонкостей процесса, 
+                    <div class="accordion-body">Проводим детальный анализ вашей ситуации, чтобы определить наиболее эффективную стратегию действий.
+                        Благодаря опыту работы с ВВК и знаниям всех тонкостей процесса,
                         мы эффективно минимизируем риски и повышаем вероятность успешного решения вашего вопроса.</div>
                 </div>
             </div>
         </div>
     </section>
-    
-    
+
+
     <!-- Лента с заголовками и текстами -->
     <section class="py-5  lift">
         <div class="row mb-4 disply-js container-fluid " id="garantii">
@@ -507,9 +519,9 @@
                 <h2>надежность</h2>
             </div>
             <div class="col-md-6 text-start desctop">
-                <p>Мы работаем честно и открыто: вы всегда знаете, на каком этапе находитесь 
-                    и какие шаги предстоят. 
-                    Наши обязательства — это не просто слова, 
+                <p>Мы работаем честно и открыто: вы всегда знаете, на каком этапе находитесь
+                    и какие шаги предстоят.
+                    Наши обязательства — это не просто слова,
                     а гарантии, на которые можно положиться.
                 </p>
             </div>
@@ -547,7 +559,7 @@
             <div class="grid-item" >
                 <div class="card-inner">
                     <div class="card-front">
-                        
+
                         <div class="text">
                             <h4  class="min-text">Полная конфиденциальность</h4>
                             <p>Мы строго соблюдаем политику конфиденциальности. Ваша личная информация, документы и детали дела остаются под надежной защитой.</p>
@@ -556,7 +568,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" >
                 <div class="card-inner">
                     <div class="card-front">
@@ -568,7 +580,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" >
                 <div class="card-inner">
                     <div class="card-front">
@@ -580,24 +592,24 @@
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" >
                 <div class="card-inner">
                     <div class="card-front">
-                        
+
                         <div class="text">
                             <h4>Полное сопровождение до результата</h4>
                             <p>Мы сопровождаем вас на каждом этапе — от анализа документов до окончательного решения вашего вопроса.</p>
                             <p>Не оставим вас на полпути.</p>
-                        </div>    
+                        </div>
                     </div>
                 </div>
             </div>
-    
+
             <div class="grid-item" >
                 <div class="card-inner">
                     <div class="card-front">
-                        
+
                         <div class="text">
                             <h4>Комплексная поддержка</h4>
                             <p>Обеспечиваем не только юридическую помощь, но и поддержку, чтобы вы чувствовали уверенность и спокойствие на каждом этапе.</p>
@@ -606,9 +618,9 @@
                     </div>
                 </div>
             </div>
-    
+
         </div>
-    </section>  
+    </section>
 
     <!-- Картинка с текстом -->
     <section class="items py-5" >
@@ -623,7 +635,7 @@
                     </div>
                     <button class="cons-form">Консультация <img class="box-footer-info_button-img_mobile" src="./img/consultation_arrow.svg" alt="strelka"></button>
                 </div>
-                
+
     </section>
 
     <!-- Блок с заголовком, текстом и сеткой -->
@@ -632,7 +644,7 @@
             <div class="client container-fluid">
                     <h2>Как будет проходить </h2>
                     <h2>наше СОТРУДНИЧЕСТВО</h2>
-                
+
             </div>
         </div>
         <div  class="custom-grid-container">
@@ -645,17 +657,17 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="custom-grid-item item-two">
-                
+
                 <div class="custom-card-front">
                     <img src="./img/numbers/one.png" alt="" srcset="">
                 </div>
             </div>
-        
+
             <div class="custom-grid-item item-three">
                 <div class="custom-card">
-                    
+
                     <div class="custom-card-front">
                     <img src="./img/numbers/two.png" alt="" srcset="">
                 </div>
@@ -672,20 +684,20 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="custom-grid-item item-five">
                 <div class="custom-card">
                     <div class="custom-card-front">
                         <h4>Разработка стратегии</h4><br>
                         <p>Вы четко понимаете, что делать дальше.</p><br>
                             <p>
-                            Составляем персональный план действий с учетом всех медицинских и юридических нюансов. 
+                            Составляем персональный план действий с учетом всех медицинских и юридических нюансов.
                             Объясняем каждый шаг простыми словами, чтобы вы четко понимали дальнейшие действия.
                             </p>
                     </div>
                 </div>
             </div>
-        
+
             <div class="custom-grid-item item-six">
                 <div class="custom-card">
                     <div class="custom-card-front">
@@ -693,7 +705,7 @@
                     </div>
                 </div>
             </div>
-        
+
             <div class="custom-grid-item item-seven">
                 <div class="custom-card">
                     <div class="custom-card-front">
@@ -715,11 +727,11 @@
             <div class="custom-grid-item item-seven">
                 <div class="custom-card">
                     <div class="custom-card-front">
-                        <h4>Сопровождение 
+                        <h4>Сопровождение
                             на всех этапах </h4><br>
-                        <p>Всегда на связи и готовы ответить 
+                        <p>Всегда на связи и готовы ответить
                             на вопросы. </p><br>
-                            
+
                             <p>Организуем взаимодействие с ВВК, судебными инстанциями и медицинскими учреждениями.
                             </p>
                     </div>
@@ -746,10 +758,10 @@
                         </h4><br>
                         <p>Добиваемся положительного исхода.
 
-                            
+
                             </p><br>
-                        <p>Мы не просто консультируем, 
-                            а ведем вас от первого обращения 
+                        <p>Мы не просто консультируем,
+                            а ведем вас от первого обращения
                             до полного разрешения ситуации.</p>
                     </div>
                 </div>
@@ -761,7 +773,7 @@
     <div class=" mb-4 marg">
                 <h2>Как будет проходить </h2>
                 <h2>наше СОТРУДНИЧЕСТВО</h2>
-         
+
     </div>
     <div class="custom-grid-container">
         <div class="custom-grid-item item-one">
@@ -774,11 +786,11 @@
                 </div>
             </div>
         </div>
-    
+
         <div class="custom-grid-item item-three">
             <img src="./img/bg_mb2.svg" alt="" srcset="">
             <div class="custom-card">
-                
+
                 <div class="custom-card-front">
                 <h4>Первичная диагностика</h4><br>
                     <p>Даем честную и объективную оценку перспектив.</p>
@@ -788,7 +800,7 @@
             </div>
             </div>
         </div>
-    
+
         <div class="custom-grid-item item-six">
             <img src="./img/numbers/tree.png" alt="" srcset="">
             <div class="custom-card">
@@ -796,13 +808,13 @@
                     <h4>Разработка стратегии</h4><br>
                     <p>Вы четко понимаете, что делать дальше.</p>
                         <p>
-                        Составляем персональный план действий с учетом всех медицинских и юридических нюансов. 
+                        Составляем персональный план действий с учетом всех медицинских и юридических нюансов.
                         Объясняем каждый шаг простыми словами, чтобы вы четко понимали дальнейшие действия.
                         </p>
                 </div>
             </div>
         </div>
-    
+
         <div class="custom-grid-item item-seven">
             <img src="./img/numbers/four.png" alt="" srcset="">
             <div class="custom-card">
@@ -819,11 +831,11 @@
             <img src="./img/numbers/five.png" alt="" srcset="">
             <div class="custom-card">
                 <div class="custom-card-front">
-                    <h4>Сопровождение 
+                    <h4>Сопровождение
                         на всех этапах </h4><br>
-                    <p>Всегда на связи и готовы ответить 
+                    <p>Всегда на связи и готовы ответить
                         на вопросы. </p>
-                        
+
                         <p>Организуем взаимодействие с ВВК, судебными инстанциями и медицинскими учреждениями.
                         </p>
                 </div>
@@ -833,15 +845,15 @@
             <img src="./img/numbers/six.png" alt="" srcset="">
             <div class="custom-card">
                 <div class="custom-card-front">
-                    
+
                     <h4>Достижение результата
                     </h4><br>
                     <p>Добиваемся положительного исхода.
 
-                        
+
                         </p>
-                    <p>Мы не просто консультируем, 
-                        а ведем вас от первого обращения 
+                    <p>Мы не просто консультируем,
+                        а ведем вас от первого обращения
                         до полного разрешения ситуации.</p>
                 </div>
             </div>
@@ -857,8 +869,8 @@
             <div class="custom-mobile-item_text">
                 <p class="custom-mobile-item-text_p">
                     Заполните простую форму на сайте.<br>
-                    Чем раньше вы обратитесь, 
-                    тем быстрее мы сможем помочь 
+                    Чем раньше вы обратитесь,
+                    тем быстрее мы сможем помочь
                     вам разобраться в ситуации.
                 </p>
             </div>
@@ -872,7 +884,7 @@
             <div class="custom-mobile-item_text">
                 <p class="custom-mobile-item-text_p">
                     Даем честную и объективную оценку перспектив.<br>
-                    Бесплатно анализируем ваш случай, изучаем медицинские документы, определяем возможные 
+                    Бесплатно анализируем ваш случай, изучаем медицинские документы, определяем возможные
                     пути решения.
                 </p>
             </div>
@@ -886,7 +898,7 @@
             <div class="custom-mobile-item_text">
                 <p class="custom-mobile-item-text_p">
                     Вы четко понимаете, что делать дальше.<br>
-                    Составляем персональный план действий с учетом всех медицинских и юридических нюансов. 
+                    Составляем персональный план действий с учетом всех медицинских и юридических нюансов.
                     Объясняем каждый шаг простыми словами, чтобы вы понимали дальнейшие действия.
                 </p>
             </div>
@@ -900,7 +912,7 @@
             <div class="custom-mobile-item_text">
                 <p class="custom-mobile-item-text_p">
                     Вы экономите время и силы.<br>
-                    Наши специалисты берут на себя оформление всех необходимых бумаг, чтобы избежать ошибок 
+                    Наши специалисты берут на себя оформление всех необходимых бумаг, чтобы избежать ошибок
                     и отказов.
                 </p>
             </div>
@@ -914,7 +926,7 @@
             <div class="custom-mobile-item_text">
                 <p class="custom-mobile-item-text_p">
                     Всегда на связи и готовы ответить на вопросы.<br>
-                    Организуем взаимодействие с ВВК, судебными инстанциями 
+                    Организуем взаимодействие с ВВК, судебными инстанциями
                     и медицинскими учреждениями.
                 </p>
             </div>
@@ -928,8 +940,8 @@
             <div class="custom-mobile-item_text">
                 <p class="custom-mobile-item-text_p">
                     Добиваемся положительного исхода.<br>
-                    Мы не просто консультируем, 
-                    а ведем вас от первого обращения 
+                    Мы не просто консультируем,
+                    а ведем вас от первого обращения
                     до полного разрешения ситуации.
                 </p>
             </div>
@@ -946,7 +958,7 @@
                     </div>
                     <button class="cons-form">Консультация <img class="box-footer-info_button-img_mobile" src="./img/consultation_arrow.svg" alt="strelka"></button>
                 </div>
-                
+
     </section>
 
 
@@ -961,8 +973,8 @@
                     </button>
                 </h2>
                 <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Военно-врачебные комиссии и медицинские вопросы требуют глубокого знания законодательства и медицины. 
-                        Ошибки в документах или незнание своих прав могут привести к неблагоприятному решению. 
+                    <div class="accordion-body">Военно-врачебные комиссии и медицинские вопросы требуют глубокого знания законодательства и медицины.
+                        Ошибки в документах или незнание своих прав могут привести к неблагоприятному решению.
                         Мы обеспечиваем профессиональную поддержку на всех этапах, повышая шансы на положительный исход.</div>
                 </div>
             </div>
@@ -975,7 +987,7 @@
                     </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Да, мы поможем вам собрать недостающие документы, получить дополнительные медицинские заключения 
+                    <div class="accordion-body">Да, мы поможем вам собрать недостающие документы, получить дополнительные медицинские заключения
                         и подготовить все необходимые бумаги для успешного рассмотрения вашего дела.</div>
                 </div>
             </div>
@@ -988,7 +1000,7 @@
                     </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Да, если имеются веские основания. Мы изучаем медицинские документы, 
+                    <div class="accordion-body">Да, если имеются веские основания. Мы изучаем медицинские документы,
                         определяем возможности для изменения категории и сопровождаем процесс обжалования решения ВВК.</div>
                 </div>
             </div>
@@ -1001,7 +1013,7 @@
                     </button>
                 </h2>
                 <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Сроки зависят от конкретной ситуации. Некоторые вопросы можно решить в течение нескольких недель, 
+                    <div class="accordion-body">Сроки зависят от конкретной ситуации. Некоторые вопросы можно решить в течение нескольких недель,
                         а на более сложные случаи может потребоваться несколько месяцев. Мы стараемся ускорить процесс, но учитываем все детали.</div>
                 </div>
             </div>
@@ -1014,7 +1026,7 @@
                     </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Все наши действия строго соответствуют законодательству. 
+                    <div class="accordion-body">Все наши действия строго соответствуют законодательству.
                         Мы работаем исключительно в правовом поле, помогая вам реализовать свои законные права.</div>
                 </div>
             </div>
@@ -1027,7 +1039,7 @@
                     </button>
                 </h2>
                 <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                    <div class="accordion-body">Мы честно оцениваем шансы каждого клиента и не даем ложных обещаний. Однако благодаря опыту, знанию системы 
+                    <div class="accordion-body">Мы честно оцениваем шансы каждого клиента и не даем ложных обещаний. Однако благодаря опыту, знанию системы
                         и индивидуальному подходу наши клиенты в большинстве случаев добиваются нужного результата.</div>
                 </div>
             </div>
@@ -1035,7 +1047,7 @@
     </section>
 
     <section class="footer">
-        
+
         <div class="footer-image-container">
             <img src="img/logo-footer.png" alt="Значимое решение">
         </div>
@@ -1060,7 +1072,7 @@
                             </div>
                         </div>
                     </div>
-    
+
                     <!-- Правый столбец (Навигация) -->
                     <div class="">
                         <div class="footer-nav">
@@ -1073,7 +1085,7 @@
                                 <li><a href="#">Консультация</a></li>
                                 <li><a href="#work">Как мы работаем</a></li>
                                 <li><a href="#faq">Ответы на вопросы</a></li>
-                                
+
                             </ul>
                         </div>
                 </div>

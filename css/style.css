@@ -44,6 +44,117 @@ p {
     font-family: 'Arial', sans-serif; 
 }
 
+.form-for-consultation{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(17, 17, 17, 0.5);
+    transition: all 0.5s ease;
+    display: none;
+    z-index: 999;
+    color: #2F2B27;
+    h4 {
+        font-size: 40px;
+    }
+    span {
+        color: rgba(47, 43, 39, 0.8);
+        font-size: 25px;
+    }
+}
+
+.form-consultation_container{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    background: #D7D0C6;
+    border-radius: 10px;
+    height: 100vh;
+    max-width: 900px;
+}
+
+.form-consultation_wrapper{
+    padding: 20px;
+}
+
+.form-consultation{
+    display: none;
+    animation-duration: 1.5s;
+    animation-fill-mode: both;
+    animation-name: fadeIn;
+}
+
+.form-consultation.open{
+    display: block;
+}
+
+
+.form-for-consultation_open {
+    display: block;
+}
+
+.form-close {
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.form-close img {
+    height: 35px;
+    width: 40px;
+}
+
+.form-consultation_block{
+    position: relative;
+    padding: 15px 70px 85px 70px;
+}
+
+.form-consultation_class{
+    margin-top: 35px;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    background: #E9E0D7;
+    border-radius: 10px;
+    input {
+        max-width: 480px;
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        margin-top: 50px;
+    }
+    textarea {
+        max-width: 480px;
+        background: none;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        margin-top: 50px;
+    }
+    input:focus {
+        outline: none;
+    }
+    textarea:focus {
+        outline: none;
+    }
+}
+
+
+.form-submit_button {
+    position: relative;
+    margin-top: 60px;
+    width: 230px;
+    border: #8B857E solid;
+    background: none;
+    border-radius: 10px;
+    color: #8B857E;
+    right: 0;
+}
+
+
+
 .modal-window {
     display: none;
     position: fixed;

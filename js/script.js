@@ -122,25 +122,49 @@ menuLinks.forEach(link => {
 });
 
 
-document.addEventListener('DOMContentLoaded', function() {
-    var modal = document.getElementById('form-modal');
-    var openButton = document.getElementById('open-form-button');
-    var closeButton = document.getElementsByClassName('close')[0];
+// document.addEventListener('DOMContentLoaded', function() {
+//     var modal = document.getElementById('form-modal');
+//     var openButton = document.getElementById('open-form-button');
+//     var closeButton = document.getElementsByClassName('close')[0];
+//
+//     openButton.onclick = function() {
+//         modal.style.display = 'block';
+//     };
+//
+//     closeButton.onclick = function() {
+//         modal.style.display = 'none';
+//     };
+//
+//     window.onclick = function(event) {
+//         if (event.target == modal) {
+//             modal.style.display = 'none';
+//         }
+//     };
+//     console.log(
+//         "123"
+//     )
+// });
 
-    openButton.onclick = function() {
-        modal.style.display = 'block';
-    };
 
-    closeButton.onclick = function() {
-        modal.style.display = 'none';
-    };
 
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = 'none';
-        }
-    };
-    console.log(
-        "123"
-    )
+// Вызов окна заявки по консультации
+const button = document.getElementById('consultation_btn');
+const button_close = document.getElementById('form-close');
+const button_submit = document.getElementById('submit_message');
+const form_consultation = document.querySelector('.form-consultation');
+const consultation = document.querySelector('.form-for-consultation');
+
+button.addEventListener('click', () => {
+    form_consultation.classList.add('open');
+    consultation.classList.add('form-for-consultation_open');
 });
+
+button_close.addEventListener('click', () => {
+    form_consultation.classList.remove('open');
+    consultation.classList.remove('form-for-consultation_open');
+})
+
+button_submit.addEventListener('click', () => {
+    alert('Ваша заявка успешно отправлена!');
+    window.location.href = '#';
+})

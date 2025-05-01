@@ -37,7 +37,7 @@ if ($response === false) {
 // Закрываем cURL
 curl_close($ch);
 
-header("Location: https://medicalxpert.ru/")
+header("Location: https://medicalxpert.ru/");
 
 exit();
 
