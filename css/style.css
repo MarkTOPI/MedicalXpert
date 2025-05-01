@@ -1187,9 +1187,6 @@ height: 50vh;
         margin: 20px 0;
     }
 
-    .head-mob-text {
-        /* margin-top: 150px; */
-    }
     .box-info .min {
         font-size: 26px;    
         color: #fff8ec93;
@@ -1407,6 +1404,58 @@ body {
 }
 
 @media (max-width: 620px) {
+    .custom-grid-container {
+        display: none;
+    }
+
+    .custom-card-for_mobile{
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .custom-card-for-mobile_item {
+        width: 100%;
+        height: 100%;
+        max-width: 330px;
+        /* max-height: 248px; */
+        margin: 50px auto;
+        background-size: cover;
+    }
+
+    .custom-mobile-item-title {
+        padding: 75px 25px 0 25px;
+    }
+
+    .custom-mobile-item_text {
+        padding: 34px 25px 80px 25px;
+    }
+
+    .custom-mobile-item_background1{
+        background: url(../img/block_mobile/1.svg);
+        background-size: cover;
+    }
+    .custom-mobile-item_background2{
+        background: url(../img/block_mobile/2.svg);
+        background-size: cover;
+    }
+    .custom-mobile-item_background3{
+        background: url(../img/block_mobile/3.svg);
+        background-size: cover;
+    }
+    .custom-mobile-item_background4{
+        background: url(../img/block_mobile/4.svg);
+        background-size: cover;
+    }
+    .custom-mobile-item_background5{
+        background: url(../img/block_mobile/5.svg);
+        background-size: cover;
+    }
+    .custom-mobile-item_background6{
+        background: url(../img/block_mobile/6.svg);
+        background-size: cover;
+    }
+
     .navbar-brand_desctop {
         display: none;
     }
