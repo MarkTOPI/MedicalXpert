@@ -709,7 +709,7 @@ nav.navbar {
 }
 
 .lift {
-    margin: 200px 0;
+    margin: 100px 0;
 }
 
 .disply-js {
@@ -928,9 +928,14 @@ height: 50vh;
 }
 
 .scroll-container {
+
     overflow-x: auto;  /* Убедитесь, что горизонтальная прокрутка доступна */
     position: relative; /* Для работы с позиционированием */
 }
+
+::-webkit-scrollbar {
+    width: 0;
+  }
 
 .scroll-content {
     display: flex;
@@ -940,7 +945,7 @@ height: 50vh;
 .scroll-content .item {
     flex: 0 0 auto;
     margin: 20px;
-    width: 75vw; /* Блоки занимают 1/4 экрана */
+    width: 55vw; /* Блоки занимают 1/4 экрана */
     min-width: 200px; /* Минимальная ширина */
     font-weight: bold;
     
@@ -949,6 +954,12 @@ height: 50vh;
     word-wrap: break-word;   /* Переносит длинные слова */
     white-space: normal;     /* Разрешает перенос строк */
     padding: 100px;           /* Добавляем отступ внутри блока */
+}
+
+.scroll-content .item p {
+    margin-top: 30px;
+    font-size: 25px;
+    font-weight: bold;
 }
 
 .bg-primary {
@@ -976,7 +987,7 @@ height: 50vh;
 
 /* Показываем скроллбар на ховер */
 .scroll-container:hover::-webkit-scrollbar {
-    display: block;
+    display: none;
     width: 8px; /* Ширина скроллбара */
 }
 
