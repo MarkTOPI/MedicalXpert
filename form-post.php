@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 // Получаем данные из формы
 $fullName = $_POST['full-name'];
 $phone = $_POST['phone'];

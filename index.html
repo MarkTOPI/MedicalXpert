@@ -58,10 +58,10 @@
                     <div class="form-consultation_block">
                         <h4>Оставьте заявку <br> на консультацию</h4>
                         <span>Мы свяжемся с вами в ближайшее время.<br>Бесплатно проанализируем вашу ситуацию и предложим оптимальные шаги для решения вашего вопроса.</span>
-                        <form class="form-consultation_class" action="#" method="post">
-                            <input placeholder="Ваше ФИО" type="text" id="full-name" name="full-name">
-                            <input class="input_tel" placeholder="Телефон" type="tel" id="phone" name="phone">
-                            <textarea class="textarea_text" placeholder="Вопрос или комментарий по делу" id="message" name="message" rows="5"></textarea>
+                        <form class="form-consultation_class" action="/form-post.php" method="post">
+                            <input placeholder="Ваше ФИО" type="text" id="NAME" name="full-name" required>
+                            <input class="input_tel" placeholder="Телефон" type="tel" id="PHONE_WORK" name="phone" required>
+                            <textarea class="textarea_text" placeholder="Вопрос или комментарий по делу" id="COMMENTS" required name="message" rows="5"></textarea>
                             <button id="submit_message" type="submit" class="form-submit_button">Отправить</button>
                         </form>
                     </div>
